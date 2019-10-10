@@ -10,7 +10,7 @@
 
 # Guide
 
-![](https://github.com/evy0311/t440p/raw/master/Guide%20Stuff/T440p_Day.png)
+<img src="https://github.com/evy0311/lat-5591-hackintosh/raw/master/Guide%20Stuff/5591-mojave.png" width="50%" height="50%">
 
 ![](https://img.shields.io/github/issues/evy0311/t440p.svg) ![](https://img.shields.io/github/forks/evy0311/t440p.svg) ![](https://img.shields.io/github/stars/evy0311/t440p.svg) ![](https://img.shields.io/github/license/evy0311/t440p.svg) ![](https://img.shields.io/twitter/url/https/github.com/evy0311/t440p.svg?style=social)
 
@@ -27,6 +27,22 @@
 - Touchpad (with all gestures)
 - WiFi and Bluetooth (with Broadcom WiFi/Bluetooth card)
 - Dell D3100 USB 3.0 Dock (all ports)
+
+## More Information
+The laptop I am specifically using is the Dell Latitude 5591 with the follows specsifications.
+##### Specs:
+- Model: Dell Latitude 5591
+- BIOS: 1.11.0
+- CPU:
+- GPU:
+- RAM:
+- Display:
+- Storage:
+- Lan:
+- Wireless:
+- Bootlaoder:
+
+Your mileage may vary when installing macOS on your 5591, since these units could be configured with many different options from the factory. Thankfully, the general configuration is mostly the same. If you have any questions regarding your specific case or need help in general, feel free to contact me via email at <evy0311@gmail.com>.
 
 ## Creating the USB Installer
 Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Mojave Vanilla installer without having access to a real Mac.
@@ -56,36 +72,11 @@ Since I don't have access to a legitimate Mac, I needed to be able to create a v
 
 ## Post-Installation
 
-##### FHD Screen
-
-If you have done the full HD (1920x1080) screen mod (like myself), it is recommended that you install [One Key HiDPI](https://github.com/xzhih/one-key-hidpi "One Key HiDPI").  This will mimic the "retina" display feature that many of Apple's newer laptops come with.
-
-##### UltraBay HDD
-
-If you are using a HDD or SSD in place of the normal optical drive, you will need to install AHCIPortInjector.kext and AppleAHCIPort.kext into `Library/Extensions`.
-
-`AHCIPortInjector.kext` fixes the `Disk not initialized` issue (disk cannot be read). `AppleAHCIPort.kext` fixes the disk being detected as an external drive (instead of internal).
-
 ##### Setting up Apple services (Facetime, iMessage, etc.)
 I *highly* recommend following [This guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) to get these features working. It worked for me on the first try and was super straight forward compared to other guides that I have seen before in the past. 
-
-##### Getting audio working
-
-In order to get audio to work, there are a few simple steps we need to follow. This has been tested and working on High Sierra and Mojave. Special Thanks to this guide [Here](https://www.tonymacx86.com/threads/guide-lenovo-thinkpad-t440p.233282/) for help in getting this to work. By default, speaker audio should work, but audio via the headhpone jack does not. Follow the steps below to get it working.
-
-
-1. First, copy the .zip file called `alc_fix.zip` inside the foldr `Audio Stuff` to the desktop.
-2. Open terminal and type `cd desktop/alc_fix`, then hit enter.
-3. Then, type `./install.sh` and press enter.
-4. The provided `config.plist` has already been configured to inject *Audio Layout* ID `28`. This enables the headphone jack to work.
-5. Restart and enjoy your audio from the headphone jack!
 
 ##### Customizing About This Mac
 
 In order to customize the About This Mac section, I recommend you follow the guide [Here](https://github.com/Haru-tan/Hackintosh-Things/blob/master/AboutThisMacMojave.md "Here").
 
 For the section about changing the logo, you can use the T440p logo's I have designed in ` /SystemLogos/`.
-
-##### Fix Middle Button Scrolling with Non-Synaptics Trackpad
-
-Since Apple only uses Synaptics trackpads in their Macbook's, a non-synaptics trackpad will have problems getting things like gestures to work, as well as the popular "middle button scrolling" used on Thinkpads (combination of pressing the middle button and using the Trackpoint to scroll). If you're like me, I ordered the Alps varient of the upgraded T450 trackpad, which the VoodooPS2Controller kext does not support gestures for. In order to "fake" the middle button scrolling, we need to download an app called [Smart Scroll](http://www.marcmoini.com/sx_en.html). Once this is done, go to the "vector scroll" section, and enable it. Then, if you clikc the middle button, you can now scroll down by using the trackpoint. This is unfortunetely only a temporary solution as it doesn't behave the same. Thanks to Redit user [daftguy](https://www.reddit.com/user/daftguy) for finding this solution. 
