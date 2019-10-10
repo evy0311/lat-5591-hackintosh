@@ -12,7 +12,7 @@
 
 <img src="https://github.com/evy0311/lat-5591-hackintosh/raw/master/Guide%20Stuff/5591-mojave.png" width="50%" height="50%">
 
-![](https://img.shields.io/github/issues/evy0311/t440p.svg) ![](https://img.shields.io/github/forks/evy0311/t440p.svg) ![](https://img.shields.io/github/stars/evy0311/t440p.svg) ![](https://img.shields.io/github/license/evy0311/t440p.svg) ![](https://img.shields.io/twitter/url/https/github.com/evy0311/t440p.svg?style=social)
+![](https://img.shields.io/github/issues/evy0311/lat-5591-hackintosh) ![](https://img.shields.io/github/forks/evy0311/lat-5591-hackintosh) ![](https://img.shields.io/github/stars/evy0311/lat-5591-hackintosh) ![](https://img.shields.io/github/license/evy0311/lat-5591-hackintosh) ![](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fevy0311%2Flat-5591-hackintosh)
 
 
 ## Information
@@ -33,14 +33,14 @@ The laptop I am specifically using is the Dell Latitude 5591 with the follows sp
 ##### Specs:
 - Model: Dell Latitude 5591
 - BIOS: 1.11.0
-- CPU:
-- GPU:
-- RAM:
-- Display:
-- Storage:
-- Lan:
-- Wireless:
-- Bootlaoder:
+- CPU: Intel® Core™ i7-8850H (6 Core - 12 Thread) ~ 2.6 - 4.3Ghz
+- GPU: Intel UHD630 1536MB
+- RAM: 2 x 2667MHz Samsung 16GB Single Channel LPDDR4
+- Display: 15.6 inch 16:9, 1920 x 1080 pixel 141 PPI
+- Storage: NVME PCIE 3.0 x4 Toshiba XG5 KXG50ZNV512G 512 GB
+- LAN: Intel Ethernet Connection I219-LM (10/100/1000/2500/5000MBit/s)
+- Wireless: DW1560
+- Bootloader: Clover v2.5k r5093
 
 Your mileage may vary when installing macOS on your 5591, since these units could be configured with many different options from the factory. Thankfully, the general configuration is mostly the same. If you have any questions regarding your specific case or need help in general, feel free to contact me via email at <evy0311@gmail.com>.
 
