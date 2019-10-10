@@ -5,7 +5,7 @@
 - This guide references a few other guides. Credit for those guides is given to their respective owners.
 - It is assumed that you have a decent understanding of Hackintosh, the macOS environment, as well as how to do basic computer tasks
 - Will guide you through some of the different information needed to get macOS Mojave 10.14.6 working on your Dell Latitude 5591.
-- Special thanks to n0faith and his repo [Here](https://github.com/n0faith/Dell-Precision-5591-Hackintosh "Here") for providing kexts and other configuration info, as well as the patched ACPI files. Also a special thanks to [midi1996](https://github.com/midi1996) on GitHub for his guide on how to create the macOS installer from Recovery.
+- Special thanks to n0faith and his repo [Here](https://github.com/n0faith/Dell-Precision-5591-Hackintosh "Here") for providing kexts and other configuration info, as well as the patched ACPI files. Also a special thanks to [midi1996](https://github.com/midi1996) on GitHub for his guide on how to create the macOS installer from Recovery. Also, a huge thank you to the members over at the [OSX Latitude](https://osxlatitude.com) forum. Their help and guidance helped me tremendously and this guide would not at all be possible without them.
 - **Note:** I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk
 
 # Guide
