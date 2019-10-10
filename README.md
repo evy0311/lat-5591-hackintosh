@@ -29,7 +29,7 @@
 - Dell D3100 USB 3.0 Dock (all ports)
 
 ## More Information
-The laptop I am specifically using is the Dell Latitude 5591 with the follows specsifications.
+The laptop I am specifically using is the Dell Latitude 5591 with the follows specifications.
 ##### Specs:
 - Model: Dell Latitude 5591
 - BIOS: 1.11.0
@@ -50,33 +50,32 @@ Since I don't have access to a legitimate Mac, I needed to be able to create a v
 1. Follow the steps at this guide [Here](https://internet-install.gitbook.io/macos-internet-install/).
 2. When you get to the part about installing clover bootloader, follow the steps below for configuring kexts, etc. 
 3. **IMPORTANT (DO NOT MISS THIS):** Now, copy Clover bootloader and the kexts files that you have downloaded to another USB drive (not the one you're burning the installer too) or an external hard drive. You will need access to them later.
-4. Copy the `CLOVER` folder you have downloaded from this repository onto your USB drive as well.
-5. Copy the `CLOVER` folder you have downloaded from this repository into `EFI/`. You can simply copy over the whole folder as the config.plist and everything else is already configured for the T440p. 
-6. The most important step that I missed twice in the guide above is to make sure you add the `HFSPlus.efi` driver into `/EFI/Clover/drivers64UEFI`. I missed this step twice and couldn't see any drivers at all inside of Clover.
-7. For more help on configuring Clover and the USB installer, the original guide linked in step 1 will be of the most help to you. Make sure you install the kexts and `CLOVER` folder from this repo onto your Clover USB, as these will guarantee your T440p will work properly.
-8. We are now ready to continue into the next topic: Installing macOS Mojave.
+4. Copy the `EFI` folder you have downloaded from this repository onto your USB drive as well.
+5. Copy the `CLOVER` folder you have downloaded from this repository into the root of your EFI partition on the drive. You can simply copy over the whole folder as the config.plist and everything else is already configured for the 5591. 
+6. We are now ready to continue into the next topic: Installing macOS Mojave.
 
 
 
 ## Installing macOS Mojave
-1. After you followed the guide above and have your USB drive ready to go, we can reboot the machine. When you reboot, enter into the BIOS to change some settings. On the T440p, you can do this by hitting `Enter` at the Lenovo boot screen.
-2. Once in the BIOS, make sure you change the following settings. `Disable Security Chip`, `Disable Anti Theft Module`, and `Disable TPM`. Basically, disable all of the "security" features. Make sure Secure boot and other features like that are off. These features will affect how macOS sleeps.
+1. After you followed the guide above and have your USB drive ready to go, we can reboot the machine. When you reboot, enter into the BIOS to change some settings. On the 5591, you can do this by hitting `F12` at the Dell boot screen.
+2. Once in the BIOS, make sure you change the following settings. `UEFI Boot Enabled`, `Legacy Options ROMS Disabled`, `AHCI Enabled`, `Secure boot Disabled`, `CPU XD Disabled`, and `Wake on LAN Disabled`. Basically, disable all of the "security" features. Make sure Secure boot and other features like that are off. These features will affect how macOS boots and sleeps.
 3. Now, reboot into macOS and select the USB drive inside of Clover.
-4. Boot into macOS and install onto your hard drive. I recommend using an SSD.
+4. Boot into macOS and install onto your hard drive.
 5. After this is done, reboot the computer and let it sit. Mine rebooted a few times on its own to go through some final installation procedures.
 6. Once you see the "region selection" screen, you are good to proceed.
 7. Create your user account and everything else, but do not sign in with your iCloud account. If it asks you to connect to a network, select the option that says do not connect and press continue. We will connect it later.
 8. After you've booted, plug in the USB drive or external hard drive that you copied the Clover file to in step 9 of the previous section. 
-9. Install Clover bootloader following the same steps as before and using the same settings, except this time install them onto your internal hard drive with your Mojave installation. I recommend checking the box that says `Install Clover Configurator` as well (it comes in handy later).
-10. We now need to copy our Clover configuration from our USB to our hard drive with Mojave. Simply copy the `CLOVER` folder that you have on your other USB drive (the one you used in step 9 of the previous section) into the `EFI` partition that Clover should have mounted during install. 
+9. Install Clover bootloader following the same steps as before and using the same settings, except this time install them onto your internal hard drive with your Mojave installation. I recommend checking the box that says `Install Clover Preference Pane` as well (it comes in handy later).
+10. We now need to copy our Clover configuration from our USB to our hard drive with Mojave. Simply copy the `EFI` folder that you have on your other USB drive (the one you used in step 3 of the previous section) into the `EFI` partition that Clover should have mounted during install. 
 
 ## Post-Installation
 
 ##### Setting up Apple services (Facetime, iMessage, etc.)
 I *highly* recommend following [This guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) to get these features working. It worked for me on the first try and was super straight forward compared to other guides that I have seen before in the past. 
 
+##### Combo Audio Jack Fix
+The built-in audio jack is a combo mic/headphone jack. In order to allow it to work properly in macOS, follow the steps [Here](https://github.com/hackintosh-stuff/ComboJack).
+
 ##### Customizing About This Mac
 
 In order to customize the About This Mac section, I recommend you follow the guide [Here](https://github.com/Haru-tan/Hackintosh-Things/blob/master/AboutThisMacMojave.md "Here").
-
-For the section about changing the logo, you can use the T440p logo's I have designed in ` /SystemLogos/`.
